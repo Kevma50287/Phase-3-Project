@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Group joiners</h1>
+
+<div id="group_joiners">
+  <% @group_joiners.each do |group_joiner| %>
+    <%= render group_joiner %>
+    <p>
+      <%= link_to "Show this group joiner", group_joiner %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New group joiner", new_group_joiner_path %>

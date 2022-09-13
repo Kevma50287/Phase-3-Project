@@ -1,0 +1,42 @@
+<%= form_with(model: calendar) do |form| %>
+  <% if calendar.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(calendar.errors.count, "error") %> prohibited this calendar from being saved:</h2>
+
+      <ul>
+        <% calendar.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :user_id, style: "display: block" %>
+    <%= form.number_field :user_id %>
+  </div>
+
+  <div>
+    <%= form.label :font, style: "display: block" %>
+    <%= form.text_field :font %>
+  </div>
+
+  <div>
+    <%= form.label :font_size, style: "display: block" %>
+    <%= form.text_field :font_size %>
+  </div>
+
+  <div>
+    <%= form.label :font_color, style: "display: block" %>
+    <%= form.text_field :font_color %>
+  </div>
+
+  <div>
+    <%= form.label :header_color, style: "display: block" %>
+    <%= form.text_field :header_color %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

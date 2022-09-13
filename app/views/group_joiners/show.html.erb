@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @group_joiner %>
+
+<div>
+  <%= link_to "Edit this group joiner", edit_group_joiner_path(@group_joiner) %> |
+  <%= link_to "Back to group joiners", group_joiners_path %>
+
+  <%= button_to "Destroy this group joiner", @group_joiner, method: :delete %>
+</div>
